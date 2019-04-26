@@ -12,4 +12,18 @@ import Model.Estudante;
  */
 public class Faculdade {
     
+    int diaFaculdade = 0;
+    
+    public void chegouFaculdade(Estudante estudante){
+        System.out.println("Você chegou na faculdade!");
+    
+    }
+    
+    public void statusFaculdade(){
+        System.out.println("Você veio "+ diaFaculdade +" dias a faculdade");
+    
+    }
+    
+    
+    
 }

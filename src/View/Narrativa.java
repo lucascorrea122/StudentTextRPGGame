@@ -1,11 +1,17 @@
 package View;
 
+import Controller.Amigo;
+import Controller.Casa;
+import Controller.Cracolandia;
+import Controller.Delegacia;
+import Controller.Faculdade;
+import Controller.Festa;
+import Controller.Hospital;
 import Controller.Metro;
 import Controller.Rodoviaria;
 import java.util.Scanner;
 import Model.Estudante;
-import Model.Estudante;
-import Model.Locais;
+
 
 /**
  * @author Flávia
@@ -14,12 +20,18 @@ public class Narrativa {
 
     Scanner entrada = new Scanner(System.in);
     Estudante estudante = new Estudante();
-    
+
     //<editor-fold defaultstate="collapsed" desc="Controladores">
     Rodoviaria acaoRodoviaria = new Rodoviaria();
     Metro acaoMetro = new Metro();
+    Faculdade acaoFaculdade = new Faculdade();
+    Casa acaoCasa = new Casa();
+    Cracolandia acaoCracolandia = new Cracolandia();
+    Festa acaoFesta = new Festa();
+    Amigo acaoAmigo = new Amigo();
+    Delegacia acaoDelegacia = new Delegacia();
+    Hospital acaoHospital = new Hospital();
     //</editor-fold>
-    
 
     public static void main(String[] args) {
         Narrativa n = new Narrativa();
@@ -44,8 +56,7 @@ public class Narrativa {
                 System.out.println("xxxx");
                 break;
             case 3:
-                System.out.println
-                         ("************** No ano de 2019 um aluno teve uma ótima nota no vestibular********************\n"
+                System.out.println("************** No ano de 2019 um aluno teve uma ótima nota no vestibular********************\n"
                         + "************** e deseja cursar Gastronomia, com isto o mesmo necessita escolher*************\n"
                         + "************** uma cidade que é ofertada o curso, após sua escolha, o estudante tem*********\n"
                         + "***************que se adaptar à nova rotina. Dentre todas opções, ele decide a cidade*******\n"
@@ -79,16 +90,13 @@ public class Narrativa {
             case 2:
                 acaoMetro.pegarMetro(estudante);
                 break;
-
+            case 3:
+                acaoCasa.inicioJogo(estudante);
             default:
                 System.out.println("");
 
         }
 
     }
-    
-    
-
- 
 
 }

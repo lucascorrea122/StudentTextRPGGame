@@ -6,15 +6,22 @@
 package Controller;
 
 import Model.Estudante;
-
+import Model.Locais;
+import javax.swing.JFrame;
 
 /**
  *
  * @author LucasCorrea
  */
-public class Cracolândia {
+public class Casa {
+    
+    public void inicioJogo(Estudante estudante){
+         System.out.println("EXPLICANDO O INICIO DO JOGO");
+         
+                
+    }
     
     
-    
-    didfij;
 }
+
+
