@@ -44,10 +44,18 @@ public class Estudante {
         return saude;
     }
 
-    public void setSaude(int saude) {
-        this.saude = saude;
-
+   public void perderSaude(int saude) {
+        setSaude(getSaude() - saude);
+        
     }
+   public void ganharSaude(int saude) {
+        setSaude(getSaude() + saude);
+        
+    }
+   public void setSaude(int saude) {
+        this.saude = saude;
+   }
+   
 
     public double getDinheiro() {
         return dinheiro;
@@ -57,7 +65,10 @@ public class Estudante {
         setDinheiro(getDinheiro() - custo);
 
     }
+     public void ganhardinheiro(double custo2) {
+        setDinheiro(getDinheiro() + custo2);
 
+    }
     public void visitarLocal(Locais local) {
         int i = local.getIndice();
         this.vetorVisitados[i]++;
@@ -69,4 +80,7 @@ public class Estudante {
     public void setDinheiro(double dinheiro) {
         this.dinheiro = dinheiro;
     }
+
+    
+    
 }
