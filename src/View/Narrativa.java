@@ -91,8 +91,7 @@ public class Narrativa {
                 acaoMetro.pegarMetro(estudante);
                 break;
             case 3:
-                
-                acaoFaculdade.statusFaculdade();
+                acaoCasa.inicioJogo(estudante);
             default:
                 System.out.println("");
 
