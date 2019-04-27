@@ -18,7 +18,9 @@ import java.util.Scanner;
 public class Casa {
     
     Scanner entrada = new Scanner(System.in);
-    int opcaoInicio = 666;
+    int opcaoInicio;
+    Delegacia acaoDelegacia = new Delegacia();
+    Faculdade acaoFaculdade = new Faculdade();
     
     
     public void inicioJogo(Estudante estudante){
@@ -72,7 +74,7 @@ public class Casa {
         System.out.println("Parabéns, o café é a refeição mais importante no dia-a-dia de um ser humano.");
         System.out.println("Você acaba de ganhar 10 pontos de saúde e 0.3 pontos de força");
         estudante.ganharSaude(10);
-        estudante.getForca()
+        estudante.ganharForca(3);
     }
     
     public void escovarDentes(Estudante estudante){
@@ -110,6 +112,23 @@ public class Casa {
                     estudante.perderSaude(40);
                     estudante.debitar(20);
                     System.out.println("Saude Atual: "+ estudante.getSaude());
+                    System.out.println("Você deseja ir registrar ocorrência?");
+                    System.out.println("Opção 1: Sim");
+                    System.out.println("Opção 2: Não");
+                    System.out.print("Opção: ");
+                    int opcaoDelegacia = entrada.nextInt();
+                    switch(opcaoDelegacia){
+                        case 1: 
+                            System.out.println("Você está indo para a delegacia:");
+                            acaoDelegacia.situacaoDelegacia(estudante);
+                            break;
+                        case 2:     
+                            System.out.println("Você cometeu um grande erro.");
+                            estudante.perderSaude(15);
+                            acaoFaculdade.aula1(estudante);
+                            acaoFaculdade.aula2(estudante);
+                            acaoFaculdade.ru(estudante);
+                    }
                     break;
                 case 2:
                     System.out.println("Está foi um ótima escolha pois você está atrasado");
@@ -126,8 +145,14 @@ public class Casa {
                                 estudante.perderSaude(10);
                                 System.out.println("Sua saùde: "+ estudante.getSaude());
                                 System.out.println("Mas não fique triste, você recebeu a informação e já está indo para a faculdade!");
+                                acaoFaculdade.aula1(estudante);
+                                acaoFaculdade.aula2(estudante);
+                                acaoFaculdade.ru(estudante);
                             }else{
                                 System.out.println("Você recebeu a informação desejada e está a caminho da faculdade.");
+                                acaoFaculdade.aula1(estudante);
+                                acaoFaculdade.aula2(estudante);
+                                acaoFaculdade.ru(estudante);
                             }
                             break;
                         case 2:
@@ -136,6 +161,9 @@ public class Casa {
                             estudante.perderSaude(15);
                             System.out.println("Saúde atual: "+ estudante.getSaude());
                             System.out.println("Mas não fiquei triste, você está a caminho da faculdade");
+                            acaoFaculdade.aula1(estudante);
+                            acaoFaculdade.aula2(estudante);
+                            acaoFaculdade.ru(estudante);
                             break;
                         default:
                             System.out.println("");
@@ -144,6 +172,11 @@ public class Casa {
             }
         }
     
+    }
+    
+    public void venceu(Estudante estudante){
+        System.out.println("Parabéns, você tem boas opções na vida!");
+        System.exit(0);
     }
     
     

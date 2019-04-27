@@ -7,10 +7,14 @@ public class Estudante {
 
     private String nome;
     private int forca = 0;
-    private int nivelLucidez = 75;
+    private int nivelLucidez = 80;
     private int saude = 100;
     private double dinheiro = 300;
 
+    public Estudante(){
+    
+    
+    }
     
     int vetorVisitados[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 
@@ -66,11 +70,11 @@ public class Estudante {
 
     }
      public void ganhardinheiro(double custo2) {
-        setDinheiro(getDinheiro() + custo2);
+        dinheiro = dinheiro + custo2;
 
     }
      public void perderForca(int forca) {
-        setDinheiro(getDinheiro() - forca);
+        this.forca -= forca;
 
     }
      public void ganharForca(int forca2) {
@@ -87,6 +91,10 @@ public class Estudante {
      */
     public void setDinheiro(double dinheiro) {
         this.dinheiro = dinheiro;
+    }
+    
+    public void perderLucidez( int lucidez){
+        this.nivelLucidez -= lucidez;
     }
 
     

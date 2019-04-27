@@ -1,45 +1,31 @@
 package View;
 
-import Controller.Amigo;
 import Controller.Casa;
-import Controller.Cracolandia;
-import Controller.Delegacia;
-import Controller.Faculdade;
-import Controller.Festa;
-import Controller.Hospital;
 import Controller.Metro;
 import Controller.Rodoviaria;
 import java.util.Scanner;
 import Model.Estudante;
-
+import Model.Estudante;
+import Model.Locais;
 
 /**
  * @author Flávia
  */
 public class Narrativa {
 
-    Scanner entrada = new Scanner(System.in);
-    Estudante estudante = new Estudante();
-
+    //Estudante estudante = new Estudante();
     //<editor-fold defaultstate="collapsed" desc="Controladores">
-    Rodoviaria acaoRodoviaria = new Rodoviaria();
-    Metro acaoMetro = new Metro();
-    Faculdade acaoFaculdade = new Faculdade();
-    Casa acaoCasa = new Casa();
-    Cracolandia acaoCracolandia = new Cracolandia();
-    Festa acaoFesta = new Festa();
-    Amigo acaoAmigo = new Amigo();
-    Delegacia acaoDelegacia = new Delegacia();
-    Hospital acaoHospital = new Hospital();
+   
     //</editor-fold>
 
     public static void main(String[] args) {
-        Narrativa n = new Narrativa();
-
-        n.menu();
-    }
-
-    public void menu() {
+        Scanner entrada = new Scanner(System.in);
+        Estudante estudante = new Estudante();
+        
+         Rodoviaria acaoRodoviaria = new Rodoviaria();
+         Metro acaoMetro = new Metro();
+         Casa casa = new Casa();
+        
         System.out.println("BEM VINDO AO *******");
         System.out.println("1 - Iniciar Jogo");
         System.out.println("2 - Continuar Jogo");
@@ -50,7 +36,7 @@ public class Narrativa {
         int menu = entrada.nextInt();
         switch (menu) {
             case 1:
-                historia();
+                casa.inicioJogo(estudante);
                 break;
             case 2:
                 System.out.println("xxxx");
@@ -72,33 +58,4 @@ public class Narrativa {
 
         }
     }
-
-    public void historia() {
-        System.out.println("alarme...hora de ir para a faculdade");
-        System.out.println("Você deve escolher como vai para a faculdade:");
-        System.out.println("-------------------------");
-        System.out.println("1 - ônibus - 2.50");
-        System.out.println("2 - metrô - 5.00");
-        System.out.println("-------------------------");
-
-        int opcao = entrada.nextInt();
-        
-        switch (opcao) {
-            case 1:
-                acaoRodoviaria.pegarOnibus(estudante);
-                break;
-            case 2:
-                acaoMetro.pegarMetro(estudante);
-                break;
-            case 3:
-                acaoCasa.inicioJogo(estudante);
-            default:
-                System.out.println("");
-
-        }
-        
-        
-
-    }
-
 }
