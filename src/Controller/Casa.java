@@ -18,7 +18,7 @@ import java.util.Scanner;
 public class Casa {
     
     Scanner entrada = new Scanner(System.in);
-    
+    int opcaoInicio = 666;
     
     
     public void inicioJogo(Estudante estudante){
@@ -33,16 +33,19 @@ public class Casa {
         System.out.println("Opção 1: Tomar banho!" );
         System.out.println("Opção 2: Tomar café!" );
         System.out.println("Opção 3: Escovar os dentes!");
-        int opcaoInicio = entrada.nextInt();
+        this.opcaoInicio = entrada.nextInt();
         switch (opcaoInicio){
             case 1:
                 banho(estudante);
+                sairCasa(estudante, 1);
                 break;
             case 2:
                 café(estudante, 0);
+                sairCasa(estudante, 1);
                 break;
             case 3:
                 escovarDentes(estudante);
+                sairCasa(estudante, 1);
                 break;
             default:    
         }
@@ -60,6 +63,7 @@ public class Casa {
         System.out.println("Craasssshhhhhh");
         System.out.println("Opa... Café da manhã é a atividade mais essencial para um ser humano,"
                 + "você acabou de levar um choque no chuveiro e perdeu 5 pontos de saude.");
+        estudante.perderSaude(5);
         System.out.println("Sua saude atual: "+ estudante.getSaude());
     }
     
@@ -67,6 +71,8 @@ public class Casa {
     public void café(Estudante estudante, int nroCafe){
         System.out.println("Parabéns, o café é a refeição mais importante no dia-a-dia de um ser humano.");
         System.out.println("Você acaba de ganhar 10 pontos de saúde e 0.3 pontos de força");
+        estudante.ganharSaude(10);
+        estudante.getForca()
     }
     
     public void escovarDentes(Estudante estudante){
@@ -101,7 +107,40 @@ public class Casa {
                     System.out.println("Sua cabeça está doendo, você levou uma coronhada!");
                     System.out.println("Você procurou sua carteia e não encontou, sorte que tinha apenas R$ 20,00 reais");
                     System.out.println("Sua saude foi reduzida em 40 pontos de saúde");
+                    estudante.perderSaude(40);
+                    estudante.debitar(20);
+                    System.out.println("Saude Atual: "+ estudante.getSaude());
+                    break;
                 case 2:
+                    System.out.println("Está foi um ótima escolha pois você está atrasado");
+                    System.out.println("Você não sabe para qual estação deseja ir. deseja pedir ajuda?");
+                    System.out.println("Opção 1: Sim");
+                    System.out.println("Opção 2: Não");
+                    System.out.println("Opção: ");
+                    int opcaoAjuda = entrada.nextInt();
+                    switch(opcaoAjuda){
+                        case 1: 
+                            if(opcaoInicio != 3){
+                                System.out.println("Você não escovou os dentes e se aproximou demais para pedir informação.");
+                                System.out.println("Acabou apanhado e perdeu 10 pontos de saúde");
+                                estudante.perderSaude(10);
+                                System.out.println("Sua saùde: "+ estudante.getSaude());
+                                System.out.println("Mas não fique triste, você recebeu a informação e já está indo para a faculdade!");
+                            }else{
+                                System.out.println("Você recebeu a informação desejada e está a caminho da faculdade.");
+                            }
+                            break;
+                        case 2:
+                            System.out.println("Você acabou sendo orgulhoso e está exausto de tanto dar voltas");
+                            System.out.println("Você encontrou seu destino, mas perdeu 15 pontos de saúde");
+                            estudante.perderSaude(15);
+                            System.out.println("Saúde atual: "+ estudante.getSaude());
+                            System.out.println("Mas não fiquei triste, você está a caminho da faculdade");
+                            break;
+                        default:
+                            System.out.println("");
+                            
+                    }
             }
         }
     
