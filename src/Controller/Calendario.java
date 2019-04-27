@@ -5,6 +5,8 @@
  */
 package Controller;
 
+import Model.Estudante;
+
 /**
  *
  * @author LucasCorrea

@@ -11,6 +11,7 @@ public class Estudante {
     private int saude = 100;
     private double dinheiro = 1000;
 
+    
     int vetorVisitados[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 
     public String getNome() {
@@ -53,12 +54,19 @@ public class Estudante {
     }
 
     public void debitar(double custo) {
-        dinheiro = dinheiro - custo;
+        setDinheiro(getDinheiro() - custo);
 
     }
 
     public void visitarLocal(Locais local) {
         int i = local.getIndice();
         this.vetorVisitados[i]++;
+    }
+
+    /**
+     * @param dinheiro the dinheiro to set
+     */
+    public void setDinheiro(double dinheiro) {
+        this.dinheiro = dinheiro;
     }
 }

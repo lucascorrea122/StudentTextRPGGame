@@ -82,7 +82,7 @@ public class Narrativa {
         System.out.println("-------------------------");
 
         int opcao = entrada.nextInt();
-
+        
         switch (opcao) {
             case 1:
                 acaoRodoviaria.pegarOnibus(estudante);
@@ -91,11 +91,14 @@ public class Narrativa {
                 acaoMetro.pegarMetro(estudante);
                 break;
             case 3:
-                acaoCasa.inicioJogo(estudante);
+                
+                acaoFaculdade.statusFaculdade();
             default:
                 System.out.println("");
 
         }
+        
+        
 
     }
 

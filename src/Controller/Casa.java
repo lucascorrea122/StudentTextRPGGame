@@ -16,9 +16,8 @@ import javax.swing.JFrame;
 public class Casa {
     
     public void inicioJogo(Estudante estudante){
-         System.out.println("EXPLICANDO O INICIO DO JOGO");
+        System.out.println("HISTORIA DO JOGO INICIANDO");
          
-                
     }
     
     
