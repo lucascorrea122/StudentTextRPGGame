@@ -7,9 +7,9 @@ public class Estudante {
 
     private String nome;
     private int forca = 0;
-    private int nivelLucidez = 100;
+    private int nivelLucidez = 75;
     private int saude = 100;
-    private double dinheiro = 1000;
+    private double dinheiro = 300;
 
     
     int vetorVisitados[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -67,6 +67,14 @@ public class Estudante {
     }
      public void ganhardinheiro(double custo2) {
         setDinheiro(getDinheiro() + custo2);
+
+    }
+     public void perderForca(int forca) {
+        setDinheiro(getDinheiro() - forca);
+
+    }
+     public void ganharForca(int forca2) {
+        setForca(getForca() + forca2);
 
     }
     public void visitarLocal(Locais local) {
