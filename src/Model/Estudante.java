@@ -6,15 +6,13 @@ package Model;
 public class Estudante {
 
     private String nome;
-    private int forca = 0;
-    private int nivelLucidez = 80;
-    private int saude = 100;
-    private double dinheiro = 300;
+    private static int forca = 0;
+    private static int nivelLucidez = 80;
+    private static int saude = 100;
+    private static double dinheiro = 300.00;
 
-    public Estudante(){
     
     
-    }
     
     int vetorVisitados[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 

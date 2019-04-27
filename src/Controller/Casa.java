@@ -6,9 +6,6 @@
 package Controller;
 
 import Model.Estudante;
-import Model.Locais;
-import javax.swing.JFrame;
-import Controller.Calendario;
 import java.util.Scanner;
 
 /**
@@ -18,11 +15,17 @@ import java.util.Scanner;
 public class Casa {
     
     Scanner entrada = new Scanner(System.in);
-    int opcaoInicio;
+    int opcaoInicio = 666;
     Delegacia acaoDelegacia = new Delegacia();
     Faculdade acaoFaculdade = new Faculdade();
+    //Estudante estudante = new Estudante( );
     
     
+    /**
+     * Códico inicial do jogo
+     * 
+     * @param estudante 
+     */
     public void inicioJogo(Estudante estudante){
         System.out.println("PRIMMMMMMMMMM...");
         System.out.println("PRIMMMMMMMMMM...");
@@ -139,7 +142,7 @@ public class Casa {
                     int opcaoAjuda = entrada.nextInt();
                     switch(opcaoAjuda){
                         case 1: 
-                            if(opcaoInicio != 3){
+                            if(opcaoInicio == 666){
                                 System.out.println("Você não escovou os dentes e se aproximou demais para pedir informação.");
                                 System.out.println("Acabou apanhado e perdeu 10 pontos de saúde");
                                 estudante.perderSaude(10);

@@ -1,6 +1,7 @@
 package View;
 
 import Controller.Casa;
+import Controller.Faculdade;
 import Controller.Metro;
 import Controller.Rodoviaria;
 import java.util.Scanner;
@@ -13,19 +14,18 @@ import Model.Locais;
  */
 public class Narrativa {
 
-    //Estudante estudante = new Estudante();
     //<editor-fold defaultstate="collapsed" desc="Controladores">
-   
-    //</editor-fold>
+    Rodoviaria acaoRodoviaria = new Rodoviaria();
+    Metro acaoMetro = new Metro();
+    Casa casa = new Casa();
+    Faculdade faculdade = new Faculdade();
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+
         Estudante estudante = new Estudante();
         
-         Rodoviaria acaoRodoviaria = new Rodoviaria();
-         Metro acaoMetro = new Metro();
-         Casa casa = new Casa();
-        
+
         System.out.println("BEM VINDO AO *******");
         System.out.println("1 - Iniciar Jogo");
         System.out.println("2 - Continuar Jogo");
@@ -36,7 +36,7 @@ public class Narrativa {
         int menu = entrada.nextInt();
         switch (menu) {
             case 1:
-                casa.inicioJogo(estudante);
+                //casa.inicioJogo(estudante);
                 break;
             case 2:
                 System.out.println("xxxx");
@@ -55,6 +55,7 @@ public class Narrativa {
 
             default:
                 System.out.println("");
+                break;
 
         }
     }
