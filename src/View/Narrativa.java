@@ -14,18 +14,26 @@ import Model.Locais;
  */
 public class Narrativa {
 
+    public int useScanner() {
+        Scanner entrada = new Scanner(System.in);
+        return entrada.nextInt();
+    }
+
     //<editor-fold defaultstate="collapsed" desc="Controladores">
     Rodoviaria acaoRodoviaria = new Rodoviaria();
+
     Metro acaoMetro = new Metro();
-    Casa casa = new Casa();
+    //Casa casa = new Casa();
     Faculdade faculdade = new Faculdade();
 
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
+       Narrativa n = new Narrativa();
+       n.iniciandoJogo();
+    }
 
+    public void iniciandoJogo() {
+        Casa casa = new Casa();
         Estudante estudante = new Estudante();
-        
-
         System.out.println("BEM VINDO AO *******");
         System.out.println("1 - Iniciar Jogo");
         System.out.println("2 - Continuar Jogo");
@@ -33,10 +41,10 @@ public class Narrativa {
         System.out.println("4 - Sair");
         System.out.println("-------------------------");
 
-        int menu = entrada.nextInt();
+        int menu = useScanner();
         switch (menu) {
             case 1:
-                //casa.inicioJogo(estudante);
+                casa.inicioJogo(estudante);
                 break;
             case 2:
                 System.out.println("xxxx");

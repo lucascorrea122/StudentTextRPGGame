@@ -8,25 +8,26 @@ package Controller;
 import Model.Estudante;
 import java.util.Scanner;
 
-
-
 /**
  *
  * @author LucasCorrea
  */
 public class Amigo {
-    
-    Scanner entrada = new Scanner(System.in);
+
+    public int useScanner() {
+        Scanner entrada = new Scanner(System.in);
+        return entrada.nextInt();
+    }
+
     GameOver over = new GameOver();
     Festa festa = new Festa();
-    
-    
-    public void interacaoAmigo(Estudante estudante){
+
+    public void interacaoAmigo(Estudante estudante) {
         System.out.println("Você chega na casa do Luciano, após alguns minutos chegam mais algumas pessoas.");
         System.out.println("Todos acabam interagindo e ingerindo bebidas álcolicas, você acaba passando um pouco dos limites,"
                 + "e sua lucidez acaba sendo reduzida pela metade");
         estudante.perderLucidez(40);
-        System.out.println("Sua lucidez: "+ estudante.getLucidez());
+        System.out.println("Sua lucidez: " + estudante.getLucidez());
         System.out.println("");
         System.out.println("");
         System.out.println("Vocês acabam decidindo fazer um jogo de perguntas e respostas.");
@@ -37,56 +38,54 @@ public class Amigo {
         System.out.println("Opção 2: Sócrates");
         System.out.println("Opção 3: Descartes");
         System.out.print("Opção:  ");
-        int questao1 = entrada.nextInt();
-        if(questao1 == 3){
+        int questao1 = useScanner();
+        if (questao1 == 3) {
             System.out.println("Você acertou!");
-        }else {
+        } else {
             System.out.println("Você errou!");
             estudante.perderSaude(10);
-            if(estudante.getSaude() < 0 ){
+            if (estudante.getSaude() < 0) {
                 over.gameOver();
-            } 
+            }
         }
-        
+
         System.out.println("Pergunta DOIS - De onde é a invenção do chuveiro elétrico?");
         System.out.println("Opção 1: França");
         System.out.println("Opção 2: Brasil");
         System.out.println("Opção 3: Inglaterra");
-        int questao2 = entrada.nextInt();
-        if(questao2 == 2){
+        int questao2 = useScanner();
+        if (questao2 == 2) {
             System.out.println("Você acertou!");
-        }else {
+        } else {
             System.out.println("Você errou!");
             estudante.perderSaude(10);
-            if(estudante.getSaude() < 0 ){
+            if (estudante.getSaude() < 0) {
                 over.gameOver();
-            } 
+            }
         }
-        
+
         System.out.println("Pergunta TRÊS - Em que região se situa Macapá?");
         System.out.println("Opção 1: Nordeste");
         System.out.println("Opção 2: Norte");
         System.out.println("Opção 3: Centro-Oeste");
-        int questao3 = entrada.nextInt();
-        if(questao3 == 2){
+        int questao3 = useScanner();
+        if (questao3 == 2) {
             System.out.println("Você acertou!");
-        }else {
+        } else {
             System.out.println("Você errou!");
             estudante.perderSaude(10);
-            if(estudante.getSaude() < 0 ){
+            if (estudante.getSaude() < 0) {
                 over.gameOver();
-            } 
+            }
         }
-        
-       
+
     }
-    
-    public void sobreviveuAteMomento(Estudante estudante){
+
+    public void sobreviveuAteMomento(Estudante estudante) {
         System.out.println("Você está indo bem no jogo até o momento, porém sua saúde está quase no final. Cuidado!!!");
-        System.out.println("Sua saúde: "+ estudante.getSaude());
+        System.out.println("Sua saúde: " + estudante.getSaude());
         System.out.println("Vocês decidiram ir a festa.");
         festa.festa(estudante);
-        
-        
+
     }
 }

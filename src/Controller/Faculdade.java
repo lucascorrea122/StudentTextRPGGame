@@ -14,13 +14,16 @@ import java.util.Scanner;
  */
 public class Faculdade {
 
+    public int useScanner() {
+        Scanner entrada = new Scanner(System.in);
+        return entrada.nextInt();
+    }
+
     int resposta;
     GameOver acaoOver = new GameOver();
     Cracolandia craco = new Cracolandia();
     int diaFaculdade = 0;
     Amigo amigo = new Amigo();
-
-    Scanner entrada = new Scanner(System.in);
 
     public void chegouFaculdade(Estudante estudante) {
         System.out.println("Você chegou na faculdade!");
@@ -36,7 +39,7 @@ public class Faculdade {
         System.out.println("Você pixa?");
         System.out.println("Opção 1: Sim");
         System.out.println("Opção 2: Não");
-        int opcao = entrada.nextInt();
+        int opcao = useScanner();
         if (opcao == 1) {
             System.out.println("Você é um delinquente juvenil, foi preso HAHAHAHA");
             acaoOver.gameOver();
@@ -47,38 +50,34 @@ public class Faculdade {
     }
 
     public void ru(Estudante estudante) {
-        
+
         System.out.println("Você chegou no resturante após uma longa manhã conturbada!");
         System.out.println("Após servi-se olha para as mesas disponiveis");
         System.out.println("Você tem duas mesas disponiveis:");
         System.out.println("opção 1: sentar-se em uma mesa vazia");
         System.out.println("opção 2: sentar-se em uma mesa com seus colegas de classe");
         System.out.println("Digite sua escolha:");
-        resposta = entrada.nextInt();
-        if(resposta==1){
+        resposta = useScanner();
+        if (resposta == 1) {
             System.out.println("Você percebe que não tem amigos");
             System.out.println("A depressão bate, você levanta e vai pra cracolândia");
             craco.depreLandia(estudante);
-        }else if(resposta == 2){
+        } else if (resposta == 2) {
             System.out.println("Você acabou socializando e fez grandes amigos, em especial um, Luciano");
             System.out.println("Luciano convidou você para ir para casa dele fazer uma interação com amigos sexta a noite");
             System.out.println("Você deseja ir?");
             System.out.println("Opção 1: SIM");
             System.out.println("Opção 2: NÂO");
             System.out.print("Opção:");
-            int opcaoAmigo = entrada.nextInt();
-            if(opcaoAmigo == 1){
-               amigo.interacaoAmigo(estudante);
-               amigo.sobreviveuAteMomento(estudante);
-            }else if(opcaoAmigo == 2){
+            int opcaoAmigo = useScanner();
+            if (opcaoAmigo == 1) {
+                amigo.interacaoAmigo(estudante);
+                amigo.sobreviveuAteMomento(estudante);
+            } else if (opcaoAmigo == 2) {
                 craco.depreLandia(estudante);
             }
-        
+
         }
-        
-        
-        
-        
 
     }
 
@@ -96,7 +95,7 @@ public class Faculdade {
         System.out.println("------------------------------------------------------------------------------------");
         System.out.println("------------------Qual o resultado da equação a seguir: ---------------------");
         System.out.println("                         Questão 1: 18x = 65 + 43");
-        resposta = entrada.nextInt();
+        resposta = useScanner();
 
         if (resposta == 6) {
             System.out.println("Muito bem, resultado correto, pegue seu dinheiro!");

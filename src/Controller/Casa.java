@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class Casa {
     
-    Scanner entrada = new Scanner(System.in);
+   // Scanner entrada = new Scanner(System.in);
     int opcaoInicio = 666;
     Delegacia acaoDelegacia = new Delegacia();
     Faculdade acaoFaculdade = new Faculdade();
@@ -25,7 +25,15 @@ public class Casa {
      * Códico inicial do jogo
      * 
      * @param estudante 
+     * 
+     * 
      */
+    
+    public int useScanner(){
+        Scanner entrada = new Scanner(System.in);
+        return entrada.nextInt();
+    }
+    
     public void inicioJogo(Estudante estudante){
         System.out.println("PRIMMMMMMMMMM...");
         System.out.println("PRIMMMMMMMMMM...");
@@ -38,7 +46,7 @@ public class Casa {
         System.out.println("Opção 1: Tomar banho!" );
         System.out.println("Opção 2: Tomar café!" );
         System.out.println("Opção 3: Escovar os dentes!");
-        this.opcaoInicio = entrada.nextInt();
+        this.opcaoInicio = useScanner();
         switch (opcaoInicio){
             case 1:
                 banho(estudante);
@@ -96,7 +104,7 @@ public class Casa {
             System.out.println("Digite 1 para ônibus:");
             System.out.println("Digite 2 para Trêm:");
             System.out.print("Opção: ");
-            int opcao = entrada.nextInt();
+            int opcao = useScanner();
             
             switch(opcao){
                 case 1:
@@ -119,7 +127,7 @@ public class Casa {
                     System.out.println("Opção 1: Sim");
                     System.out.println("Opção 2: Não");
                     System.out.print("Opção: ");
-                    int opcaoDelegacia = entrada.nextInt();
+                    int opcaoDelegacia = useScanner();
                     switch(opcaoDelegacia){
                         case 1: 
                             System.out.println("Você está indo para a delegacia:");
@@ -139,7 +147,7 @@ public class Casa {
                     System.out.println("Opção 1: Sim");
                     System.out.println("Opção 2: Não");
                     System.out.println("Opção: ");
-                    int opcaoAjuda = entrada.nextInt();
+                    int opcaoAjuda =useScanner();
                     switch(opcaoAjuda){
                         case 1: 
                             if(opcaoInicio == 666){
