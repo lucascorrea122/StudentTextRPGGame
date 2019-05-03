@@ -36,6 +36,8 @@ public class Faculdade {
     }
 
     public void aula2(Estudante estudante) {
+        System.out.println(" VAMOS PARA A PROXIMA AULA");
+        divisao();
         System.out.println("Voce entra na sala de aula e seu professor está entregando as provas da aula passada");
         System.out.println("Vá até a mesa dele pegar a sua");
         System.out.println("O QUE? Você tirou 2 na prova.");
@@ -44,18 +46,22 @@ public class Faculdade {
         System.out.println("Você pixa?");
         System.out.println("Opção 1: Sim");
         System.out.println("Opção 2: Não");
+        divisao();
         int opcao = useScanner();
         if (opcao == 1) {
             System.out.println("Você é um delinquente juvenil, foi preso HAHAHAHA");
             acaoOver.gameOver();
         } else if (opcao == 2) {
             System.out.println("Parabéns você não é delinquente!");
+            divisao();
         }
 
     }
 
     public void ru(Estudante estudante) {
-
+        
+        System.out.println("HORA DE COMER, VÁ AO RESTAURANTE");
+        divisao();
         System.out.println("Você chegou no resturante após uma longa manhã conturbada!");
         System.out.println("Após servi-se olha para as mesas disponiveis");
         System.out.println("Você tem duas mesas disponiveis:");
@@ -64,9 +70,11 @@ public class Faculdade {
         System.out.println("Digite sua escolha:");
         resposta = useScanner();
         if (resposta == 1) {
+            divisao();
             System.out.println("Você percebe que não tem amigos");
             System.out.println("A depressão bate, você levanta e vai pra cracolândia");
             craco.depreLandia(estudante);
+            divisao();
         } else if (resposta == 2) {
             System.out.println("Você acabou socializando e fez grandes amigos, em especial um, Luciano");
             System.out.println("Luciano convidou você para ir para casa dele fazer uma interação com amigos sexta a noite");
@@ -92,7 +100,7 @@ public class Faculdade {
     }
 
     public void aula1(Estudante estudante) {
-
+        divisao();
         System.out.println("Você entra na sala de aula e seu professor saiu, antes de sair\n"
                 + "ele deixou uma equação numérica para que resolvam, seus amigos então fazendo\n"
                 + "um bolão para quem acertar primeiro a questão, o vencedor ganha 20 reais\n");
@@ -108,10 +116,14 @@ public class Faculdade {
             System.out.println("Seu saldo atual é: " + estudante.getDinheiro());
             divisao();
         } else {
+            divisao();
             System.out.println("Resultado errado, deixou de ganhar 20 reais");
+            divisao();
             System.out.println("Além de errar a resposta se irritou e  acabou tendo um ataque no miocardio");
-            System.out.println("Você 35 pontos de saúde");
+            System.out.println("Sua saude foi redusida");
             estudante.perderSaude(60);
+            System.out.println("Sua saude é: " + estudante.getSaude());
+            divisao();
             if (estudante.getSaude() < 0) {
                 System.out.println("Sua saúde chegou ao negátivo!");
                 acaoOver.gameOver();

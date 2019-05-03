@@ -19,7 +19,7 @@ public class Cracolandia {
     GameOver over = new  GameOver();
     
     public void depreLandia(Estudante estudante){
-        System.out.println("Você desanimado com a vida, não tem mais vontade de estudar e a vida social anda mal");
+        System.out.println("Você  esta desanimado com a vida, não tem mais vontade de estudar e a vida social anda mal");
         System.out.println("Você passou 3 dias em diversos lugares com pessoas estranhas e gastou todo quase todo seu dinheiro com drogas");
         estudante.setDinheiro(0);
         System.out.println("Seu saldo: "+ estudante.getDinheiro() );
