@@ -18,6 +18,10 @@ public class Narrativa {
         Scanner entrada = new Scanner(System.in);
         return entrada.nextInt();
     }
+    public void divisao(){
+        System.out.println("\n------------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
+        
+    }
 
     public static void main(String[] args) {
         Narrativa n = new Narrativa();
@@ -37,7 +41,7 @@ public class Narrativa {
         System.out.println("2 - Continuar Jogo");
         System.out.println("3 - Conhecer um pouco mais da história");
         System.out.println("4 - Sair");
-        System.out.println("-------------------------");
+        divisao();
 
         int menu = useScanner();
         switch (menu) {
@@ -58,9 +62,9 @@ public class Narrativa {
                         + "***************escolhas que ocasionarão na sua melhor  sua adaptação, onde tais*************\n"
                         + " **************escolhas afetarão diretamente no seu cotidiano, e futuras escolhas.**********\n");
                 break;
-
+            case 4:
             default:
-                System.out.println("");
+                System.out.println("op invalida");
                 break;
 
         }

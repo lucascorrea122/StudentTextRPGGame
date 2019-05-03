@@ -14,6 +14,11 @@ import java.util.Scanner;
  */
 public class Faculdade {
 
+    public void divisao() {
+        System.out.println("\n------------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
+
+    }
+
     public int useScanner() {
         Scanner entrada = new Scanner(System.in);
         return entrada.nextInt();
@@ -88,19 +93,20 @@ public class Faculdade {
 
     public void aula1(Estudante estudante) {
 
-        System.out.println("---------Você entra na sala de aula e seu professor saiu, antes de sair------------------------\n"
-                + "---------ele deixou uma equação numérica para que resolvam, seus amigos então fazendo----------\n"
-                + "---------um bolão para quem acertar primeiro a questão, o vencedor ganha 20 reais--------------\n");
+        System.out.println("Você entra na sala de aula e seu professor saiu, antes de sair\n"
+                + "ele deixou uma equação numérica para que resolvam, seus amigos então fazendo\n"
+                + "um bolão para quem acertar primeiro a questão, o vencedor ganha 20 reais\n");
 
-        System.out.println("------------------------------------------------------------------------------------");
+        divisao();
         System.out.println("------------------Qual o resultado da equação a seguir: ---------------------");
         System.out.println("                         Questão 1: 18x = 65 + 43");
         resposta = useScanner();
-
+        
         if (resposta == 6) {
             System.out.println("Muito bem, resultado correto, pegue seu dinheiro!");
             estudante.ganhardinheiro(20.0);
             System.out.println("Seu saldo atual é: " + estudante.getDinheiro());
+            divisao();
         } else {
             System.out.println("Resultado errado, deixou de ganhar 20 reais");
             System.out.println("Além de errar a resposta se irritou e  acabou tendo um ataque no miocardio");
