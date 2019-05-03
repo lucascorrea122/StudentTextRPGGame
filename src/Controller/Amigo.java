@@ -19,10 +19,9 @@ public class Amigo {
         return entrada.nextInt();
     }
 
-    GameOver over = new GameOver();
-    Festa festa = new Festa();
-
     public void interacaoAmigo(Estudante estudante) {
+        GameOver over = new GameOver();
+        
         System.out.println("Você chega na casa do Luciano, após alguns minutos chegam mais algumas pessoas.");
         System.out.println("Todos acabam interagindo e ingerindo bebidas álcolicas, você acaba passando um pouco dos limites,"
                 + "e sua lucidez acaba sendo reduzida pela metade");
@@ -82,6 +81,7 @@ public class Amigo {
     }
 
     public void sobreviveuAteMomento(Estudante estudante) {
+        Festa festa = new Festa();
         System.out.println("Você está indo bem no jogo até o momento, porém sua saúde está quase no final. Cuidado!!!");
         System.out.println("Sua saúde: " + estudante.getSaude());
         System.out.println("Vocês decidiram ir a festa.");

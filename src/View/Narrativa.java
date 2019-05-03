@@ -19,20 +19,18 @@ public class Narrativa {
         return entrada.nextInt();
     }
 
-    //<editor-fold defaultstate="collapsed" desc="Controladores">
-    Rodoviaria acaoRodoviaria = new Rodoviaria();
-
-    Metro acaoMetro = new Metro();
-    //Casa casa = new Casa();
-    Faculdade faculdade = new Faculdade();
-
     public static void main(String[] args) {
-       Narrativa n = new Narrativa();
-       n.iniciandoJogo();
+        Narrativa n = new Narrativa();
+        n.iniciandoJogo();
     }
 
     public void iniciandoJogo() {
         Casa casa = new Casa();
+        Rodoviaria acaoRodoviaria = new Rodoviaria();
+
+        Metro acaoMetro = new Metro();
+
+        Faculdade faculdade = new Faculdade();
         Estudante estudante = new Estudante();
         System.out.println("BEM VINDO AO *******");
         System.out.println("1 - Iniciar Jogo");
