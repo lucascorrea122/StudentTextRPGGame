@@ -16,6 +16,11 @@ import java.util.Scanner;
  */
 public class Delegacia {
 
+    public void divisao() {
+        System.out.println("\n------------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
+
+    }
+
     public int useScanner() {
         Scanner entrada = new Scanner(System.in);
         return entrada.nextInt();
@@ -30,12 +35,13 @@ public class Delegacia {
     }
 
     public void situacaoDelegacia(Estudante estudante) {
-     
+        divisao();
         System.out.println("Você está na sala de espera muito tempo, incomodado levanta para reclamar da situação");
         System.out.println("Você aumenta o tom de voz com o policial, o mesmo solicita que você se acalme.");
         System.out.println("Você se acalma?");
         System.out.println("Opção 1: sim");
         System.out.println("Opção 2: Não");
+        divisao();
         System.out.print("Opção: ");
         int opcao = useScanner();
         if (opcao == 1) {

@@ -86,7 +86,7 @@ public class Casa {
     public void café(Estudante estudante, int nroCafe) {
         divisao();
         System.out.println("Parabéns, o café é a refeição mais importante no dia-a-dia de um ser humano.");
-        System.out.println("Você acaba de ganhar 10 pontos de saúde e 0.3 pontos de força");
+        System.out.println("Você acaba de ganhar saude e força");
         estudante.ganharSaude(10);
         estudante.ganharForca(3);
     }

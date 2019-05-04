@@ -59,6 +59,7 @@ public class Faculdade {
     }
 
     public void ru(Estudante estudante) {
+        Casa casa = new Casa();
         
         System.out.println("HORA DE COMER, VÁ AO RESTAURANTE");
         divisao();
@@ -89,7 +90,10 @@ public class Faculdade {
                 amigo.interacaoAmigo(estudante);
                 amigo.sobreviveuAteMomento(estudante);
             } else if (opcaoAmigo == 2) {
-                craco.depreLandia(estudante);
+                
+                System.out.println("Você se despede de seus amigos e vai para casa");
+                
+                casa.venceu(estudante);
             }
 
         }
