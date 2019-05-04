@@ -14,6 +14,11 @@ import java.util.Scanner;
  */
 public class Amigo {
 
+    public void divisao() {
+        System.out.println("\n------------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
+
+    }
+
     public int useScanner() {
         Scanner entrada = new Scanner(System.in);
         return entrada.nextInt();
@@ -21,14 +26,13 @@ public class Amigo {
 
     public void interacaoAmigo(Estudante estudante) {
         GameOver over = new GameOver();
-        
+        divisao();
         System.out.println("Você chega na casa do Luciano, após alguns minutos chegam mais algumas pessoas.");
         System.out.println("Todos acabam interagindo e ingerindo bebidas álcolicas, você acaba passando um pouco dos limites,"
                 + "e sua lucidez acaba sendo reduzida pela metade");
         estudante.perderLucidez(40);
         System.out.println("Sua lucidez: " + estudante.getLucidez());
-        System.out.println("");
-        System.out.println("");
+        divisao();
         System.out.println("Vocês acabam decidindo fazer um jogo de perguntas e respostas.");
         System.out.println("Quem perder deve tomar um dose de Absinto, ao tomar esta dose sua saude é reduzida em 10 pontos de saúde");
         System.out.println("PRONTO???");
@@ -81,10 +85,13 @@ public class Amigo {
     }
 
     public void sobreviveuAteMomento(Estudante estudante) {
+        divisao();
         Festa festa = new Festa();
         System.out.println("Você está indo bem no jogo até o momento, porém sua saúde está quase no final. Cuidado!!!");
         System.out.println("Sua saúde: " + estudante.getSaude());
+        divisao();
         System.out.println("Vocês decidiram ir a festa.");
+        divisao();
         festa.festa(estudante);
 
     }

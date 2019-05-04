@@ -22,6 +22,7 @@ public class Hospital {
             over.gameOver();
         }else if(estudante.getSaude() > -20){
             System.out.println("Você conseguiu escapar por pouco, foi tratado e levado para casa");
+            System.out.println("Saude: "+estudante.getSaude());
             casa.venceu(estudante);
         }
         

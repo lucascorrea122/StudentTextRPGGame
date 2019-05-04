@@ -76,11 +76,13 @@ public class Faculdade {
             craco.depreLandia(estudante);
             divisao();
         } else if (resposta == 2) {
+            divisao();
             System.out.println("Você acabou socializando e fez grandes amigos, em especial um, Luciano");
             System.out.println("Luciano convidou você para ir para casa dele fazer uma interação com amigos sexta a noite");
             System.out.println("Você deseja ir?");
             System.out.println("Opção 1: SIM");
             System.out.println("Opção 2: NÂO");
+            divisao();
             System.out.print("Opção:");
             int opcaoAmigo = useScanner();
             if (opcaoAmigo == 1) {

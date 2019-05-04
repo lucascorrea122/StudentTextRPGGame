@@ -93,8 +93,8 @@ public class Casa {
 
     public void escovarDentes(Estudante estudante) {
         divisao();
-        System.out.println("Higenização bucal é exencial, porém o café da manhã é a refeição mais essencial de"
-                + "um ser humano. Mas não fique triste pelo menos você não irá apanhar na rua caso se aproxime muito"
+        System.out.println("Higenização bucal é exencial, porém o café da manhã é a refeição mais essencial de "
+                + "um ser humano.\nPelo menos você não irá apanhar na rua caso se aproxime muito "
                 + "de alguém.");
     }
 
@@ -203,7 +203,8 @@ public class Casa {
     }
 
     public void venceu(Estudante estudante) {
-        System.out.println("Parabéns, você tem boas opções na vida!");
+        divisao();
+        System.out.println("Parabéns, você retornou a sua casa, venceu!");
         System.exit(0);
     }
 
